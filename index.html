@@ -1,0 +1,820 @@
+<html>
+<!-- Styles -->
+<style>
+#chartdiv {
+  height: 500px;
+}
+#chartdiv_hs {
+  height: 500px;
+}
+.carousel-caption {
+
+text-align: left
+}
+
+</style>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<script src="https://cdn.amcharts.com/lib/4/core.js"></script>
+<script src="https://cdn.amcharts.com/lib/4/charts.js"></script>
+<script src="https://cdn.amcharts.com/lib/4/plugins/sunburst.js"></script>
+<script src="https://cdn.amcharts.com/lib/4/themes/animated.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<!-- Chart code -->
+<script>
+am4core.ready(function() {
+
+// Themes begin
+am4core.useTheme(am4themes_animated);
+// Themes end
+
+// create chart
+var chart = am4core.create("chartdiv", am4plugins_sunburst.Sunburst);
+chart.padding(80, 80, 80, 80);
+chart.radius = am4core.percent(98);
+
+chart.data = [{
+  name: "religious",
+  children: [
+  {name: "religious_tradition", value: 1 },
+  {name: "hinduism", value: 1 },
+  {name: "judaism", value: 1 },
+  {name: "religion", value: 1 },
+  {name: "secular", value: 1 },
+  {name: "believer", value: 1 },
+  {name: "spiritual_tradition", value: 1 },
+  {name: "hindus", value: 1 },
+  {name: "ideological", value: 1 },
+  {name: "ethnic", value: 1 },
+  {name: "clergy", value: 1 },
+  {name: "buddhist", value: 1 },
+  {name: "political", value: 1 },
+  {name: "tantric", value: 1 },
+  {name: "affiliation", value: 1 },
+  {name: "oriental", value: 1 },
+  {name: "worship", value: 1 },
+  {name: "agnostic", value: 1 },
+  {name: "christians", value: 1 },
+  {name: "christianity", value: 1 },
+  {name: "metaphysical", value: 1 },
+  {name: "doctrine", value: 1 },
+  {name: "hindu", value: 1 },
+  {name: "muslims", value: 1 },
+  {name: "monastic", value: 1 },
+  {name: "devotional", value: 1 },
+  {name: "orthodox", value: 1 },
+  {name: "ideology", value: 1 },
+  {name: "subscribe", value: 1 },
+  {name: "dogma", value: 1 }
+  ]
+},
+{
+  name: "spiritual",
+  children: [
+  {name: "spiritual_path", value: 1 },
+{name: "religious_tradition", value: 1 },
+{name: "spiritual_tradition", value: 1 },
+{name: "spiritual_teacher", value: 1 },
+{name: "tantric", value: 1 },
+{name: "teaching", value: 1 },
+{name: "path", value: 1 },
+{name: "community", value: 1 },
+{name: "renewal", value: 1 },
+{name: "buddhist", value: 1 },
+{name: "hinduism", value: 1 },
+{name: "aspiration", value: 1 },
+{name: "spiritual_journey", value: 1 },
+{name: "mystical", value: 1 },
+{name: "judaism", value: 1 },
+{name: "buddhahood", value: 1 },
+{name: "awakening", value: 1 },
+{name: "worship", value: 1 },
+{name: "tradition", value: 1 },
+{name: "bodhisattvas", value: 1 },
+{name: "spiritual_awakening", value: 1 },
+{name: "salvation", value: 1 },
+{name: "charismatic", value: 1 },
+{name: "lineage", value: 1 },
+{name: "greatness", value: 1 },
+{name: "christianity", value: 1 },
+{name: "true", value: 1 },
+{name: "spirituality", value: 1 },
+{name: "devotional", value: 1 },
+{name: "awakened_heart", value: 1 },
+]
+},
+{
+  name: "mindfulness",
+  children: [
+  {name: "practice", value: 1 },
+  {name: "meditation", value: 1 },
+  {name: "mindful", value: 1 },
+  {name: "formal_sitting", value: 1 },
+  {name: "technique", value: 1 },
+  {name: "mindful_awareness", value: 1 },
+  {name: "formal_informal", value: 1 },
+  {name: "nondistraction", value: 1 },
+  {name: "cultivate", value: 1 },
+  {name: "training", value: 1 },
+  {name: "mmft", value: 1 },
+  {name: "metacognitive", value: 1 },
+  {name: "clear_comprehension", value: 1 },
+  {name: "journale", value: 1 },
+  {name: "mindfulness_training", value: 1 },
+  {name: "mbs", value: 1 },
+  {name: "informally", value: 1 },
+  {name: "edm", value: 1 },
+  {name: "benefit", value: 1 },
+  {name: "foundational", value: 1 },
+  {name: "nonjudge", value: 1 },
+  {name: "evidence_base", value: 1 },
+  {name: "mindsight_skill", value: 1 },
+  {name: "method", value: 1 },
+  {name: "fulness", value: 1 },
+  {name: "disciplined", value: 1 },
+  {name: "brown_ryan", value: 1 },
+  {name: "nonjudgmental", value: 1 },
+  {name: "develop", value: 1 },
+  {name: "operational", value: 1 },
+]},
+{
+  name: "meditation",
+  children: [
+  {name: "practice", value: 1 },
+{name: "mindfulness", value: 1 },
+{name: "formal_sitting", value: 1 },
+{name: "formal_meditation", value: 1 },
+{name: "informally", value: 1 },
+{name: "meditate", value: 1 },
+{name: "formal_informal", value: 1 },
+{name: "shinay", value: 1 },
+{name: "training", value: 1 },
+{name: "contemplative_practice", value: 1 },
+{name: "formal_practice", value: 1 },
+{name: "goenka", value: 1 },
+{name: "fulness", value: 1 },
+{name: "meditative", value: 1 },
+{name: "exercise", value: 1 },
+{name: "formal", value: 1 },
+{name: "technique", value: 1 },
+{name: "body_scan", value: 1 },
+{name: "sitting", value: 1 },
+{name: "introductory", value: 1 },
+{name: "booster", value: 1 },
+{name: "shamatha", value: 1 },
+{name: "thirty_minute", value: 1 },
+{name: "disciplined", value: 1 },
+{name: "twice_day", value: 1 },
+{name: "mindful_walking", value: 1 },
+{name: "concentration", value: 1 },
+{name: "session", value: 1 },
+{name: "beginner", value: 1 },
+{name: "choiceless_awareness", value: 1 },
+]},
+
+{
+  name: "compassion",
+  children: [
+  {name: "joy_equanimity", value: 1 },
+  {name: "compa", value: 1 },
+  {name: "kindness", value: 1 },
+  {name: "benevolence", value: 1 },
+  {name: "love_kindness", value: 1 },
+  {name: "love_friendliness", value: 1 },
+  {name: "love", value: 1 },
+  {name: "awakened_heart", value: 1 },
+  {name: "kindness_compassion", value: 1 },
+  {name: "compassionate", value: 1 },
+  {name: "goodwill", value: 1 },
+  {name: "tenderness", value: 1 },
+  {name: "widen_circle", value: 1 },
+  {name: "maitri", value: 1 },
+  {name: "sympathetic_joy", value: 1 },
+  {name: "cultivate", value: 1 },
+  {name: "bravery", value: 1 },
+  {name: "lovingkindness", value: 1 },
+  {name: "altruistic_joy", value: 1 },
+  {name: "empathy_compassion", value: 1 },
+  {name: "understanding", value: 1 },
+  {name: "unconditional", value: 1 },
+  {name: "free_suffer", value: 1 },
+  {name: "suffering", value: 1 },
+  {name: "fearlessness", value: 1 },
+  {name: "generosity", value: 1 },
+  {name: "empathy", value: 1 },
+  {name: "openheartedness", value: 1 },
+  {name: "nonviolence", value: 1 },
+  {name: "basic_goodness", value: 1 },
+
+]},
+{
+  name: "suffering",
+  children: [
+  {name: "suffer", value: 1 },
+  {name: "pain", value: 1 },
+  {name: "su_ere", value: 1 },
+  {name: "misery", value: 1 },
+  {name: "sorrow", value: 1 },
+  {name: "fear", value: 1 },
+  {name: "enormity", value: 1 },
+  {name: "inflict", value: 1 },
+  {name: "suf", value: 1 },
+  {name: "anguish", value: 1 },
+  {name: "free_suffer", value: 1 },
+  {name: "compassion", value: 1 },
+  {name: "emotional_pain", value: 1 },
+  {name: "anger_hatred", value: 1 },
+  {name: "anger", value: 1 },
+  {name: "relieve_suffering", value: 1 },
+  {name: "cause", value: 1 },
+  {name: "wrong_perception", value: 1 },
+  {name: "cause_suffer", value: 1 },
+  {name: "difficulty", value: 1 },
+  {name: "loved_one", value: 1 },
+  {name: "internal_formation", value: 1 },
+  {name: "alleviate", value: 1 },
+  {name: "dis_ease", value: 1 },
+  {name: "bitterness", value: 1 },
+  {name: "affliction", value: 1 },
+  {name: "cause_suffering", value: 1 },
+  {name: "bondage", value: 1 },
+  {name: "injustice", value: 1 },
+  {name: "cruelty", value: 1 },
+
+]},
+];
+
+chart.colors.step = 2;
+chart.fontSize = 11;
+chart.innerRadius = am4core.percent(20);
+
+// define data fields
+chart.dataFields.value = "value";
+chart.dataFields.name = "name";
+chart.dataFields.children = "children";
+
+
+var level0SeriesTemplate = new am4plugins_sunburst.SunburstSeries();
+chart.seriesTemplates.setKey("0", level0SeriesTemplate)
+
+// this makes labels to be hidden if they don't fit
+level0SeriesTemplate.labels.template.truncate = true;
+level0SeriesTemplate.labels.template.hideOversized = true;
+level0SeriesTemplate.showOnInit = false;
+level0SeriesTemplate.usePercentHack = false;
+
+
+
+level0SeriesTemplate.radius = am4core.percent(100);
+level0SeriesTemplate.innerRadius = am4core.percent(0);
+
+let selectedState = level0SeriesTemplate.states.create("selected");
+selectedState.properties.opacity = 0.7;
+level0SeriesTemplate.defaultState.properties.radius = am4core.percent(100);
+
+var currentlySelected;
+
+level0SeriesTemplate.slices.template.events.on("over", function(event) {
+  if(event.target.dataItem.sunburstDataItem.children){
+   event.target.cursorOverStyle = am4core.MouseCursorStyle.pointer;
+  }
+})
+
+level0SeriesTemplate.slices.template.events.on("hit", function(event) {
+  zoomOutButton.show();
+  var hitSlice = event.target;
+
+  if (hitSlice.dataItem.sunburstDataItem.children) {
+
+    var series = event.target.dataItem.component;
+
+    if (!series.dummyData) {
+      series.tooltip.disabled = true;
+      hitSlice.dataItem.label.radius = (hitSlice.radius - hitSlice.pixelInnerRadius) - 7;
+      hitSlice.dataItem.label.bent = true;
+      hitSlice.dataItem.label.rotation = -180;
+
+      currentlySelected = hitSlice;
+      series.dummyData = true;
+      series.setState("selected");
+      hitSlice.dataItem.sunburstDataItem.series.show();
+      series.slices.each(function(slice) {
+        if (slice != event.target) {
+          slice.dataItem.hide();
+        }
+      })
+    }
+    else {
+      drillUp(hitSlice);
+    }
+  }
+})
+
+
+level0SeriesTemplate.labels.template.adapter.add("rotation", function(rotation, target) {
+  target.maxWidth = target.dataItem.slice.radius - target.dataItem.slice.innerRadius - 10;
+  target.maxHeight = Math.abs(target.dataItem.slice.arc * (target.dataItem.slice.innerRadius + target.dataItem.slice.radius) / 2 * am4core.math.RADIANS);
+  target.text="{name}";
+
+
+  return rotation;
+})
+
+var level1SeriesTemplate = level0SeriesTemplate.clone();
+level1SeriesTemplate.hidden = true;
+level1SeriesTemplate.innerRadius = am4core.percent(10);
+chart.seriesTemplates.setKey("1", level1SeriesTemplate)
+level1SeriesTemplate.fillOpacity = 0.75;
+
+var level2SeriesTemplate = level0SeriesTemplate.clone();
+level2SeriesTemplate.hidden = true;
+level2SeriesTemplate.innerRadius = am4core.percent(20);
+chart.seriesTemplates.setKey("2", level2SeriesTemplate)
+
+var zoomOutButton = chart.seriesContainer.createChild(am4core.ZoomOutButton);
+zoomOutButton.visible = false;
+zoomOutButton.horizontalCenter = "middle";
+zoomOutButton.verticalCenter = "middle";
+zoomOutButton.events.on("hit", function() {
+  drillUp(currentlySelected)
+})
+
+
+function drillUp(slice) {
+  collapse(slice);
+  var series = slice.dataItem.component;
+  series.tooltip.disabled = false;
+  series.dummyData = false;
+  series.setState("default");
+
+  series.slices.each(function(slice) {
+    if (slice != event.target) {
+
+      slice.dataItem.show();
+
+
+    }
+  })
+
+  if (series.parentDataItem.seriesDataItem) {
+    currentlySelected = series.parentDataItem.seriesDataItem.slice;
+  }
+  else {
+    zoomOutButton.hide();
+  }
+}
+
+
+function collapse(slice) {
+
+  slice.dataItem.label.bent = false;
+  slice.dataItem.label.radius = 10;
+
+
+  if (slice.dataItem.sunburstDataItem.children) {
+    slice.dataItem.sunburstDataItem.children.each(function(child) {
+      child.seriesDataItem.component.setState("hidden");
+      collapse(child.seriesDataItem.slice);
+    })
+  }
+}
+
+}); // end am4core.ready()
+</script>
+
+<script>
+am4core.ready(function() {
+
+// Themes begin
+am4core.useTheme(am4themes_animated);
+// Themes end
+
+// create chart
+var chart = am4core.create("chartdiv_hs", am4plugins_sunburst.Sunburst);
+chart.padding(80, 80, 80, 80);
+chart.radius = am4core.percent(98);
+
+chart.data = [{
+  name: "religious",
+  children: [
+  {name: "spiritual", value: 1 },
+  {name: "philosopher", value: 1 },
+  {name: "buddhist", value: 1 },
+  {name: "highlight", value: 1 },
+  {name: "society", value: 1 },
+  {name: "advocate", value: 1 },
+  {name: "personal", value: 1 },
+  {name: "concept", value: 1 },
+  {name: "identity", value: 1 },
+  {name: "health_diagnosis", value: 1 },
+  {name: "ancient", value: 1 },
+  {name: "organization", value: 1 },
+  {name: "western", value: 1 },
+  {name: "being", value: 1 },
+  {name: "model", value: 1 },
+  {name: "tradition", value: 1 },
+  {name: "community", value: 1 },
+  {name: "view", value: 1 },
+  {name: "personality", value: 1 },
+  {name: "narcissism", value: 1 },
+  {name: "thrive", value: 1 },
+  {name: "independent", value: 1 },
+  {name: "zak", value: 1 },
+  {name: "live_mental", value: 1 },
+  {name: "narrative", value: 1 },
+  {name: "largely", value: 1 },
+  {name: "culture", value: 1 },
+  {name: "seek", value: 1 },
+  {name: "happiness", value: 1 },
+  {name: "unique", value: 1 },
+  {name: "affiliation", value: 1 },
+  {name: "oriental", value: 1 },
+  {name: "worship", value: 1 },
+  {name: "agnostic", value: 1 },
+  {name: "christians", value: 1 },
+  {name: "christianity", value: 1 },
+  {name: "metaphysical", value: 1 },
+  {name: "doctrine", value: 1 },
+  {name: "hindu", value: 1 },
+  {name: "muslims", value: 1 },
+  {name: "monastic", value: 1 },
+  {name: "devotional", value: 1 },
+  {name: "orthodox", value: 1 },
+  {name: "ideology", value: 1 },
+  {name: "subscribe", value: 1 },
+  {name: "dogma", value: 1 }
+  ]
+},
+{
+  name: "spiritual",
+  children: [
+  {name: "religious", value: 1 },
+{name: "highlight", value: 1 },
+{name: "pursue", value: 1 },
+{name: "hobby", value: 1 },
+{name: "view", value: 1 },
+{name: "method", value: 1 },
+{name: "passion", value: 1 },
+{name: "identity", value: 1 },
+{name: "seek", value: 1 },
+{name: "concept", value: 1 },
+{name: "model", value: 1 },
+{name: "philosopher", value: 1 },
+{name: "personal", value: 1 },
+{name: "buddhist", value: 1 },
+{name: "independent", value: 1 },
+{name: "happiness", value: 1 },
+{name: "ancient", value: 1 },
+{name: "lifestyle", value: 1 },
+{name: "advocate", value: 1 },
+{name: "extend", value: 1 },
+{name: "provide", value: 1 },
+{name: "agreement", value: 1 },
+{name: "invest", value: 1 },
+{name: "largely", value: 1 },
+{name: "wisdom", value: 1 },
+{name: "increasingly", value: 1 },
+{name: "insight", value: 1 },
+{name: "emphasize", value: 1 },
+{name: "accomplishment", value: 1 },
+{name: "achievement", value: 1 },
+]
+},
+{
+  name: "mindfulness",
+  children: [
+  {name: "practice_mindfulness", value: 1 },
+  {name: "practice", value: 1 },
+  {name: "integrate", value: 1 },
+  {name: "effective", value: 1 },
+  {name: "tool", value: 1 },
+  {name: "implement", value: 1 },
+  {name: "basis", value: 1 },
+  {name: "consistent", value: 1 },
+  {name: "technique", value: 1 },
+  {name: "encourage", value: 1 },
+  {name: "benefit", value: 1 },
+  {name: "non", value: 1 },
+  {name: "component", value: 1 },
+  {name: "everyday_life", value: 1 },
+  {name: "incorporate", value: 1 },
+  {name: "prove", value: 1 },
+  {name: "meditation", value: 1 },
+  {name: "skill", value: 1 },
+  {name: "principle", value: 1 },
+  {name: "cultivate", value: 1 },
+  {name: "daily", value: 1 },
+  {name: "adhd", value: 1 },
+  {name: "resilience", value: 1 },
+  {name: "improvement", value: 1 },
+  {name: "regular", value: 1 },
+  {name: "beneficial", value: 1 },
+  {name: "flexibility", value: 1 },
+  {name: "meditator", value: 1 },
+  {name: "management", value: 1 },
+  {name: "improve", value: 1 }
+]},
+{
+  name: "meditation",
+  children: [
+  {name: "practice", value: 1 },
+{name: "technique", value: 1 },
+{name: "guide", value: 1 },
+{name: "daily", value: 1 },
+{name: "regular", value: 1 },
+{name: "meditation_practice", value: 1 },
+{name: "everyday_life", value: 1 },
+{name: "basis", value: 1 },
+{name: "benefit", value: 1 },
+{name: "session", value: 1 },
+{name: "visualization", value: 1 },
+{name: "recommend", value: 1 },
+{name: "meditate", value: 1 },
+{name: "mindfulness", value: 1 },
+{name: "meditating", value: 1 },
+{name: "practice_mindfulness", value: 1 },
+{name: "consistent", value: 1 },
+{name: "integrate", value: 1 },
+{name: "progress", value: 1 },
+{name: "dedicate", value: 1 },
+{name: "successfully", value: 1 },
+{name: "effective", value: 1 },
+{name: "somewhat", value: 1 },
+{name: "basic", value: 1 },
+{name: "motivated", value: 1 },
+{name: "reap", value: 1 },
+{name: "headspace", value: 1 },
+{name: "everyday", value: 1 },
+{name: "focused", value: 1 },
+{name: "useful", value: 1 }
+]},
+
+{
+  name: "compassion",
+  children: [
+  {name: "empathy", value: 1 },
+{name: "innate", value: 1 },
+{name: "self_compassion", value: 1 },
+{name: "cultivate", value: 1 },
+{name: "ability", value: 1 },
+{name: "stability", value: 1 },
+{name: "aspect", value: 1 },
+{name: "willingness", value: 1 },
+{name: "attitude", value: 1 },
+{name: "curiosity", value: 1 },
+{name: "harmony", value: 1 },
+{name: "growth", value: 1 },
+{name: "strong", value: 1 },
+{name: "understanding", value: 1 },
+{name: "outlook", value: 1 },
+{name: "perspective", value: 1 },
+{name: "potential", value: 1 },
+{name: "perception", value: 1 },
+{name: "capacity", value: 1 },
+{name: "generosity", value: 1 },
+{name: "setback", value: 1 },
+{name: "courage", value: 1 },
+{name: "fundamental", value: 1 },
+{name: "mindset", value: 1 },
+{name: "define", value: 1 },
+{name: "understand", value: 1 },
+{name: "ultimately", value: 1 },
+{name: "humanity", value: 1 },
+{name: "valuable", value: 1 },
+{name: "broad", value: 1 },
+
+
+]},
+{
+  name: "suffering",
+  children: [
+  {name: "confront", value: 1 },
+  {name: "underlying", value: 1 },
+  {name: "overwhelm", value: 1 },
+  {name: "uncertainty", value: 1 },
+  {name: "sadness", value: 1 },
+  {name: "feeling", value: 1 },
+  {name: "grieving", value: 1 },
+  {name: "differently", value: 1 },
+  {name: "acknowledge", value: 1 },
+  {name: "behave", value: 1 },
+  {name: "deny", value: 1 },
+  {name: "way", value: 1 },
+  {name: "anger", value: 1 },
+  {name: "simply", value: 1 },
+  {name: "setback", value: 1 },
+  {name: "dwell", value: 1 },
+  {name: "circumstance", value: 1 },
+  {name: "inherently", value: 1 },
+  {name: "uncomfortable", value: 1 },
+  {name: "unpleasant", value: 1 },
+  {name: "numb", value: 1 },
+  {name: "vulnerability", value: 1 },
+  {name: "overwhelming", value: 1 },
+  {name: "painful", value: 1 },
+  {name: "deal", value: 1 },
+  {name: "experience", value: 1 },
+  {name: "rational", value: 1 },
+  {name: "absolutely", value: 1 },
+  {name: "witness", value: 1 },
+  {name: "morin", value: 1 },
+
+
+
+]},
+];
+
+chart.colors.step = 2;
+chart.fontSize = 11;
+chart.innerRadius = am4core.percent(20);
+
+// define data fields
+chart.dataFields.value = "value";
+chart.dataFields.name = "name";
+chart.dataFields.children = "children";
+
+
+var level0SeriesTemplate = new am4plugins_sunburst.SunburstSeries();
+chart.seriesTemplates.setKey("0", level0SeriesTemplate)
+
+// this makes labels to be hidden if they don't fit
+level0SeriesTemplate.labels.template.truncate = true;
+level0SeriesTemplate.labels.template.hideOversized = true;
+level0SeriesTemplate.showOnInit = false;
+level0SeriesTemplate.usePercentHack = false;
+
+
+
+level0SeriesTemplate.radius = am4core.percent(100);
+level0SeriesTemplate.innerRadius = am4core.percent(0);
+
+let selectedState = level0SeriesTemplate.states.create("selected");
+selectedState.properties.opacity = 0.7;
+level0SeriesTemplate.defaultState.properties.radius = am4core.percent(100);
+
+var currentlySelected;
+
+level0SeriesTemplate.slices.template.events.on("over", function(event) {
+  if(event.target.dataItem.sunburstDataItem.children){
+   event.target.cursorOverStyle = am4core.MouseCursorStyle.pointer;
+  }
+})
+
+level0SeriesTemplate.slices.template.events.on("hit", function(event) {
+  zoomOutButton.show();
+  var hitSlice = event.target;
+
+  if (hitSlice.dataItem.sunburstDataItem.children) {
+
+    var series = event.target.dataItem.component;
+
+    if (!series.dummyData) {
+      series.tooltip.disabled = true;
+      hitSlice.dataItem.label.radius = (hitSlice.radius - hitSlice.pixelInnerRadius) - 7;
+      hitSlice.dataItem.label.bent = true;
+      hitSlice.dataItem.label.rotation = -180;
+
+      currentlySelected = hitSlice;
+      series.dummyData = true;
+      series.setState("selected");
+      hitSlice.dataItem.sunburstDataItem.series.show();
+      series.slices.each(function(slice) {
+        if (slice != event.target) {
+          slice.dataItem.hide();
+        }
+      })
+    }
+    else {
+      drillUp(hitSlice);
+    }
+  }
+})
+
+
+level0SeriesTemplate.labels.template.adapter.add("rotation", function(rotation, target) {
+  target.maxWidth = target.dataItem.slice.radius - target.dataItem.slice.innerRadius - 10;
+  target.maxHeight = Math.abs(target.dataItem.slice.arc * (target.dataItem.slice.innerRadius + target.dataItem.slice.radius) / 2 * am4core.math.RADIANS);
+  target.text="{name}";
+
+
+  return rotation;
+})
+
+var level1SeriesTemplate = level0SeriesTemplate.clone();
+level1SeriesTemplate.hidden = true;
+level1SeriesTemplate.innerRadius = am4core.percent(10);
+chart.seriesTemplates.setKey("1", level1SeriesTemplate)
+level1SeriesTemplate.fillOpacity = 0.75;
+
+var level2SeriesTemplate = level0SeriesTemplate.clone();
+level2SeriesTemplate.hidden = true;
+level2SeriesTemplate.innerRadius = am4core.percent(20);
+chart.seriesTemplates.setKey("2", level2SeriesTemplate)
+
+var zoomOutButton = chart.seriesContainer.createChild(am4core.ZoomOutButton);
+zoomOutButton.visible = false;
+zoomOutButton.horizontalCenter = "middle";
+zoomOutButton.verticalCenter = "middle";
+zoomOutButton.events.on("hit", function() {
+  drillUp(currentlySelected)
+})
+
+
+function drillUp(slice) {
+  collapse(slice);
+  var series = slice.dataItem.component;
+  series.tooltip.disabled = false;
+  series.dummyData = false;
+  series.setState("default");
+
+  series.slices.each(function(slice) {
+    if (slice != event.target) {
+
+      slice.dataItem.show();
+
+
+    }
+  })
+
+  if (series.parentDataItem.seriesDataItem) {
+    currentlySelected = series.parentDataItem.seriesDataItem.slice;
+  }
+  else {
+    zoomOutButton.hide();
+  }
+}
+
+
+function collapse(slice) {
+
+  slice.dataItem.label.bent = false;
+  slice.dataItem.label.radius = 10;
+
+
+  if (slice.dataItem.sunburstDataItem.children) {
+    slice.dataItem.sunburstDataItem.children.each(function(child) {
+      child.seriesDataItem.component.setState("hidden");
+      collapse(child.seriesDataItem.slice);
+    })
+  }
+}
+
+}); // end am4core.ready()
+</script>
+<!-- HTML -->
+<body>
+
+  <div class="container">
+    <h2>Word2vec similar words</h2>
+    <div id="myCarousel" class="carousel slide" data-interval="false" data-ride="carousel">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+      </ol>
+
+      <!-- Wrapper for slides -->
+      <div class="carousel-inner">
+        <div class="item active">
+          <div id="chartdiv"></div>
+          <div class="carousel-caption d-none d-md-block">
+
+              <h5>Books corpus</h5>
+
+            </div>
+        </div>
+
+        <div class="item">
+          <div id="chartdiv_hs"></div>
+          <div class="carousel-caption d-none d-md-block">
+
+              <h5>Headspace corpus</h5>
+
+            </div>
+        </div>
+
+
+      </div>
+
+      <!-- Left and right controls -->
+      <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#myCarousel" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </div>
+
+<!-- <div id="chartdiv"></div> -->
+
+<!-- <div id="chartdiv_hs"></div> -->
+
+</body>
+</html>
